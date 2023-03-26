@@ -1,4 +1,9 @@
+import Experience from "./experiencees.json";
+import TextTruncate from "react-text-truncate"; // recommend
+
 export default function Experiences() {
+  var TextTruncate = require("react-text-truncate");
+
   return (
     <>
       <div className="mt-7">
@@ -113,31 +118,50 @@ export default function Experiences() {
           </div>
         </form>
       </div>
-      <div class="mt-9 m-4 grid mb-8 shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2">
-        <figure class="flex m-4 flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded md:rounded dark:bg-gray-800 dark:border-gray-700">
-          <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              Very easy this was to integrate
-            </h3>
-            <p class="my-4">
-              If you care for your time, I hands down would go with this."
-            </p>
-          </blockquote>
-          <figcaption class="flex items-center justify-center space-x-3">
-            <img
-              class="rounded-full w-9 h-9"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
-              alt="profileicture"
-            />
-            <div class="space-y-0.5 font-medium dark:text-white text-left">
-              <div>Bonnie Green</div>
-              <div class="text-sm text-gray-500 dark:text-gray-400">
-                Developer at Open AI
-              </div>
-            </div>
-          </figcaption>
-        </figure>
-        <figure class="flex m-4 flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded md:rounded dark:bg-gray-800 dark:border-gray-700">
+      <div class="mt-9 m-4 grid mb-8 shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 lg:grid-cols-3">
+        {Experience.experience.map((e, key) => {
+          return (
+            <a
+              href="/experiences/1"
+              class="flex m-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded md:rounded dark:bg-gray-800 dark:border-gray-700"
+            >
+              <blockquote class="max-w-1xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  {e.title}
+                </h3>
+                <p class="my-4">
+                  <TextTruncate
+                    line={2}
+                    element="span"
+                    truncateText="…"
+                    text={e.description}
+                    textTruncateChild={
+                      <a className="text-blue-600">Read More</a>
+                    }
+                  />
+                </p>
+              </blockquote>
+              <figcaption class="flex items-center justify-center space-x-3">
+                <img
+                  class="rounded-full w-9 h-9"
+                  src={e.img}
+                  alt="profileicture"
+                />
+                <div class="space-y-0.5 font-medium dark:text-white text-left">
+                  <div>{e.name}</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">
+                    {e.designation}
+                  </div>
+                </div>
+              </figcaption>
+            </a>
+          );
+        })}
+
+        {/* <a
+          href="/experiences/1"
+          class="flex m-4 flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded md:rounded dark:bg-gray-800 dark:border-gray-700"
+        >
           <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
               Solid foundation for any project
@@ -160,8 +184,11 @@ export default function Experiences() {
               </div>
             </div>
           </figcaption>
-        </figure>
-        <figure class="flex m-4 flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded md:rounded dark:bg-gray-800 dark:border-gray-700">
+        </a>
+        <a
+          href="/experiences/1"
+          class="flex m-4 flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded md:rounded dark:bg-gray-800 dark:border-gray-700"
+        >
           <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
               Mindblowing workflow
@@ -171,7 +198,7 @@ export default function Experiences() {
               undoubtedly level up your next application."
             </p>
           </blockquote>
-          <figcaption class="flex items-center justify-center space-x-3">
+          <a class="flex items-center justify-center space-x-3">
             <img
               class="rounded-full w-9 h-9"
               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
@@ -183,9 +210,12 @@ export default function Experiences() {
                 Software Engineer at Facebook
               </div>
             </div>
-          </figcaption>
-        </figure>
-        <figure class="flex m-4 flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded md:rounded dark:bg-gray-800 dark:border-gray-700">
+          </a>
+        </a>
+        <a
+          href="/experiences/1"
+          class="flex m-4 flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded md:rounded dark:bg-gray-800 dark:border-gray-700"
+        >
           <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
               Efficient Collaborating
@@ -208,7 +238,7 @@ export default function Experiences() {
               </div>
             </div>
           </figcaption>
-        </figure>
+        </a> */}
       </div>
     </>
   );

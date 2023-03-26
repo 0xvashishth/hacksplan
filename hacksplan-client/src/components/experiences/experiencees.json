@@ -1,0 +1,25 @@
+{
+    "experience":[
+        {
+            "title": "DUHacks Hackathon Experience",
+            "name": "Vashishth Patel",
+            "designation": "Lead Organiser | DUHacks",
+            "description": "The hackathon was a great success in terms of helping out students and organising such huge event in hybrid mode 😃",
+            "img": "https://user-images.githubusercontent.com/76911582/227760572-2cff4b4c-56af-4c39-92f6-2c948ac1b34d.png"
+        },
+        {
+            "title": "DUHacks 1.0 2022 Hackathon Experience",
+            "name": "Smit Padaliya",
+            "designation": "Management Team | DUHacks 2022",
+            "description": "Unreal! That’s the first word which comes to my mind whenever I think about my first hackathon’s experience! If you’re yet to take part in a hackathon or try out something new and need some motivation, this blog is just what you need. Let me take you back to the story of how I participated in my first hackathon…",
+            "img": "https://user-images.githubusercontent.com/76911582/227760814-f40e94f4-b3c2-48ac-b4d9-f621611c7a87.png"
+        },
+        {
+            "title": "CodeChef Chapter | Coding Competition",
+            "name": "Ayush Rudani",
+            "designation": "Speaker | CodeChef Competition",
+            "description": "The event was a great success, I enjoyed a lot in speaking at DDU Codechef chapter. First I prepared for the event details and then I prepered for the ttopics that was suggested by the team.",
+            "img": "https://user-images.githubusercontent.com/76911582/227761107-d3ad96ea-6296-4e85-a2db-48c874b81083.png"
+        }
+    ]
+}
