@@ -1,6 +1,6 @@
 import "./App.css";
 import NavBar from "./components/navbar/navbar";
-import Home from "./components/home/home";
+// import Home from "./components/home/home";
 import {
   RouterProvider,
 } from "react-router-dom";

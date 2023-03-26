@@ -77,7 +77,7 @@ function Home() {
           Stay up to date and move forward with your Plans 🎉🎉
         </p>
         <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-          <a className=" dark:text-gray-400">
+          <a className="dark:text-gray-400" href="https://github.com/vasu-1">
             Made with 💗 by{" "}
             <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
               Vashishth Patel
