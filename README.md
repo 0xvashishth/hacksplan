@@ -1,3 +1,19 @@
+<h1 align="center">🎉 Hacksplan 🎉</h1>
+<h3 align="center">Say goodbye to the hassle of event organizing and hello to effortless event organising and planning 😎</h3>
+<div align="center">
+<a href="https://github.com/vasu-1/hacksplan"><img src="https://sloc.xyz/github/vasu-1/hacksplan" alt="total lines"/></a>
+<a href="https://github.com/vasu-1/hacksplan"><img src="https://img.shields.io/github/stars/vasu-1/hacksplan" alt="Stars"/></a>
+<a href="https://github.com/vasu-1/hacksplan/network/members"><img src="https://img.shields.io/github/forks/vasu-1/hacksplan" alt="Forks"/></a>
+<a href="https://github.com/vasu-1/hacksplan/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/vasu-1/hacksplan?color=2b9348"></a>
+</div>
+
+# Tech Stack
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
+
 ## Inspiration
 I have built this website to make event organizing more efficient and accessible for everyone. Many event organizers face challenges in finding sponsorship details, staying up-to-date on upcoming events, and accessing resources to help improve their planning process. By creating a platform that brings all of these tools and resources together in one place, event organizers can focus more on the creative aspects of event planning and less on the administrative tasks. Additionally, making event organizing more efficient can also help make events more successful and enjoyable for attendees.
 
@@ -28,3 +44,7 @@ One of the things I'm most proud of is the research and planning that went into 
 - Sponsors Registration
 - Community Registration
 - Curated List of Resources for Event Planning.
+
+
+
+<i>Made with 💗 By *Vashishth Patel*</i>
