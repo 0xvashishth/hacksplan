@@ -1,5 +1,5 @@
 import SponsorCard from "./sponsorCard";
-
+import sponsors from "./sponsorships.json"
 function Sponsorships() {
   return (
     <div className="mt-7 justify-center">
@@ -46,10 +46,15 @@ function Sponsorships() {
         </div>
     </div>
 </form>
-
-      <SponsorCard />
-      <SponsorCard />
-      <SponsorCard />
+<div class="mt-9 m-4 grid mb-8 shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 lg:grid-cols-3">
+      {
+        sponsors.sponsors.map((e, key)=>
+          {
+            return <SponsorCard obj={e}/>
+        }
+        )
+      }
+      </div>
       </div>
     </div>
   );
