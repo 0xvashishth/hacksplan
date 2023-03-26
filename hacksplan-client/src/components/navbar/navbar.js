@@ -3,12 +3,8 @@ function NavBar() {
     <>
       <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
-          <a href="https://flowbite.com/" class="flex items-center">
-            <img
-              src="logo.png"
-              class="h-6 mr-3 sm:h-9"
-              alt="Flowbite Logo"
-            />
+          <a href="/" class="flex items-center">
+            <img src="logo.png" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
               HacksPlan
             </span>
@@ -62,8 +58,100 @@ function NavBar() {
             </div>
           </div>
           <div class="flex items-center md:order-2">
-          <a href="#login" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Login</a>
-            <a href="#signup" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Sign up</a>
+            <a
+              href="#login"
+              class="flex text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="20"
+                height="20"
+                viewBox="0 0 48 48"
+              >
+                <radialGradient
+                  id="A7gfmRnQJ4TuM2hgrd0Tra"
+                  cx="11.177"
+                  cy="8.393"
+                  r="40.312"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#0370c8"></stop>
+                  <stop offset=".484" stop-color="#036fc5"></stop>
+                  <stop offset=".775" stop-color="#036abd"></stop>
+                  <stop offset="1" stop-color="#0362b0"></stop>
+                </radialGradient>
+                <path
+                  fill="url(#undefined)"
+                  d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
+                ></path>
+                <radialGradient
+                  id="A7gfmRnQJ4TuM2hgrd0Trb"
+                  cx="24"
+                  cy="44.108"
+                  r="16.14"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0"></stop>
+                  <stop offset="1" stop-opacity="0"></stop>
+                </radialGradient>
+                <path
+                  fill="url(#undefined)"
+                  d="M24,44c5.795,0,10.998-2.48,14.651-6.418C36.177,31.943,30.552,28,24,28	s-12.177,3.943-14.651,9.582C13.002,41.52,18.205,44,24,44z"
+                ></path>
+                <radialGradient
+                  id="A7gfmRnQJ4TuM2hgrd0Trc"
+                  cx="24"
+                  cy="20"
+                  r="9.5"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0"></stop>
+                  <stop offset="1" stop-opacity="0"></stop>
+                </radialGradient>
+                <circle cx="24" cy="20" r="9.5" fill="url(#undefined)"></circle>
+                <linearGradient
+                  id="A7gfmRnQJ4TuM2hgrd0Trd_kDoeg22e5jUY_gr1"
+                  x1="18.573"
+                  x2="29.735"
+                  y1="13.573"
+                  y2="24.735"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#75daff"></stop>
+                  <stop offset="1" stop-color="#1ea2e4"></stop>
+                </linearGradient>
+                <circle
+                  cx="24"
+                  cy="19"
+                  r="8"
+                  fill="url(#A7gfmRnQJ4TuM2hgrd0Trd_kDoeg22e5jUY_gr1)"
+                ></circle>
+                <linearGradient
+                  id="A7gfmRnQJ4TuM2hgrd0Tre_kDoeg22e5jUY_gr2"
+                  x1="17.007"
+                  x2="30.888"
+                  y1="31.21"
+                  y2="45.091"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#75daff"></stop>
+                  <stop offset="1" stop-color="#1ea2e4"></stop>
+                </linearGradient>
+                <path
+                  fill="url(#A7gfmRnQJ4TuM2hgrd0Tre_kDoeg22e5jUY_gr2)"
+                  d="M24,44c5.015,0,9.587-1.859,13.098-4.909C35.107,33.784,30.002,30,24,30	s-11.107,3.784-13.098,9.091C14.413,42.141,18.985,44,24,44z"
+                ></path>
+              </svg>
+              Login
+            </a>
+            <a
+              href="#signup"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            >
+              Sign up
+            </a>
             <button
               type="button"
               class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
@@ -73,11 +161,7 @@ function NavBar() {
               data-dropdown-placement="bottom"
             >
               <span class="sr-only">Open user menu</span>
-              <img
-                class="w-8 h-8 rounded-full"
-                src="/logo.png"
-                alt="user"
-              />
+              <img class="w-8 h-8 rounded-full" src="/logo.png" alt="user" />
             </button>
             <div
               class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
@@ -126,7 +210,7 @@ function NavBar() {
                 </li>
               </ul>
             </div>
-            
+
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
@@ -157,7 +241,7 @@ function NavBar() {
             <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-800 dark:border-gray-700">
               <li>
                 <a
-                  href="/Getstarted"
+                  href="/"
                   class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
                 >
                   Get Started
@@ -173,7 +257,7 @@ function NavBar() {
               </li>
               <li>
                 <a
-                  href="/community"
+                  href="/communities"
                   class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Communities
