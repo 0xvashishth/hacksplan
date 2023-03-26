@@ -1,0 +1,44 @@
+{
+    "communities": [
+        {
+            "name": "Major League Hacking",
+            "description": "A community for event organizers to network, share tips and resources, and collaborate on event projects.",
+            "website": "https://mlh.io"
+         },
+         {
+            "name": "Event Planners Association",
+            "description": "A professional organization for event planners that provides education, networking opportunities, and industry resources.",
+            "website": "https://eventplannersassociation.com"
+         },
+         {
+            "name": "Eventbrite Community",
+            "description": "A community of event organizers and promoters who use Eventbrite to plan, promote, and manage events.",
+            "website": "https://www.eventbrite.com/community/"
+         },
+         {
+            "name": "Toastmasters International",
+            "description": "A nonprofit organization that helps members develop public speaking and leadership skills through regular meetings, workshops, and events.",
+            "website": "https://www.toastmasters.org/"
+         },
+         {
+            "name": "Women Who Code",
+            "description": "A global community of women in tech that offers resources, mentorship, and networking opportunities to help members advance their careers.",
+            "website": "https://www.womenwhocode.com/"
+         },
+         {
+            "name": "The Knot Community",
+            "description": "A community of wedding planners, vendors, and brides-to-be who share advice, inspiration, and ideas for creating the perfect wedding.",
+            "website": "https://www.theknot.com/community"
+         },
+         {
+            "name": "International Live Events Association",
+            "description": "A global community of event professionals that offers education, certification, and networking opportunities to help members grow their businesses and advance their careers.",
+            "website": "https://www.ileahub.com/"
+         },
+         {
+            "name": "International Live Events Association",
+            "description": "A global community of event professionals that offers education, certification, and networking opportunities to help members grow their businesses and advance their careers.",
+            "website": "https://www.ileahub.com/"
+         }     
+    ]
+}

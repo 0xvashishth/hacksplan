@@ -1,5 +1,5 @@
 import CommunityCard from "./communityCard";
-
+import communities from "./communities.json"
 function Communities() {
   return (
     <div className="mt-7 justify-center">
@@ -120,9 +120,15 @@ function Communities() {
           </div>
         </form>
 
-        <CommunityCard />
-        <CommunityCard />
-        <CommunityCard />
+        <div class="mt-9 m-4 grid mb-8 shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 lg:grid-cols-3">
+      {
+        communities.communities.map((e, key)=>
+          {
+            return <CommunityCard obj={e}/>
+        }
+        )
+      }
+      </div>
       </div>
     </div>
   );

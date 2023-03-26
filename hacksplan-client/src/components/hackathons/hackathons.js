@@ -137,7 +137,7 @@ export default function Hackathons() {
       </div>
       <div class="mt-9 m-4 grid mb-8 shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-3 lg:grid-cols-4">
         {hackathons.map((e, key) => {
-          var link = "https://devfolio.co/" + e.slug;
+          var link =  "https://" + e.slug + ".devfolio.co/";
           return (
             <div class="max-w-sm m-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <a href="#">

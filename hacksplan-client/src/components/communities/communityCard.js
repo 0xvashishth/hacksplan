@@ -1,16 +1,18 @@
-export default function CommunityCard() {
+export default function CommunityCard(props) {
+  var obj = props.obj;
+  console.log(props, obj)
+
     return (
-      <div class="w-full p-4 mt-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <div class="m-4 mt-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
         <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
-          Major League Hacking
+          {obj.name}
         </h5>
         <p class="mb-5 text-sm text-gray-500 sm:text-lg dark:text-gray-500">
-          Stay up to date with major league hacking website and community partnership details, for more
-          info reach out to us with below link..👍🏻
+          {obj.description}
         </p>
         <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
           <a
-            href="#lin"
+            href={obj.contact}
             class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
           >
             <svg
@@ -86,11 +88,11 @@ export default function CommunityCard() {
               ></path>
             </svg>
             {"  "}
-            <div class="text-left">
+            <a class="text-left">
               <div class="-mt-1 font-sans text-sm font-semibold">
-                Contact Major League Hacking
+                Contact {obj.name}
               </div>
-            </div>
+            </a>
           </a>
         </div>
       </div>
