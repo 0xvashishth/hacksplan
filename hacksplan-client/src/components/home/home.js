@@ -15,9 +15,7 @@ function Home() {
             In Better Way.
           </h1>
           <p class="text-lg text-center font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-            Here at Hacksplan we provide services like, community, experiences
-            docs, sponsorship contacts, ongoing and past hackathon details and
-            much more..
+            Here at Hacksplan we provide variety of tools and resources to make event planning more efficient and effective.
           </p>
 
           <div
