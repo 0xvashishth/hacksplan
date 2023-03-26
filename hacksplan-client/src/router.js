@@ -5,6 +5,7 @@ import {
 import Home from "./components/home/home"
 import Sponsorships from "./components/sponsorships/sponsorships";
 import Communities from "./components/communities/communities";
+import Experiences from "./components/experiences/experiences";
   
   const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ import Communities from "./components/communities/communities";
     {
       path: "/communities",
       element: <Communities/>
+    },
+    {
+      path: "/experiences",
+      element: <Experiences/>
     }
   ]);
   
