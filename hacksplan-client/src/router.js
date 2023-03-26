@@ -6,6 +6,8 @@ import Home from "./components/home/home"
 import Sponsorships from "./components/sponsorships/sponsorships";
 import Communities from "./components/communities/communities";
 import Experiences from "./components/experiences/experiences";
+import ExperiencePage from "./components/experiences/experiencePage";
+import Hackathons from "./components/hackathons/hackathons";
   
   const router = createBrowserRouter([
     {
@@ -23,6 +25,14 @@ import Experiences from "./components/experiences/experiences";
     {
       path: "/experiences",
       element: <Experiences/>
+    },
+    {
+      path: "/experiences/:id",
+      element: <ExperiencePage/>,
+    },
+    {
+      path: "/hackathons",
+      element: <Hackathons/>
     }
   ]);
   

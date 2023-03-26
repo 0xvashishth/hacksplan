@@ -1,17 +1,35 @@
-import Experience from "./experiencees.json";
+import Experience from "./hackathons.json";
+import axios from "axios";
+import React from "react";
 
-export default function Experiences() {
+export default function Hackathons() {
   var TextTruncate = require("react-text-truncate");
+  var [hackathons, sethackathons] = React.useState([]);
+  React.useEffect(() => {
+    axios
+      .get(
+        "https://devfolio.co/_next/data/0RHUwD5XSlAnVxYuOfYsX/hackathons.json"
+      )
+      .then((response) => {
+        console.log(
+          response.data.pageProps.dehydratedState.queries[0].state.data
+            .open_hackathons
+        );
+        sethackathons(
+          response.data.pageProps.dehydratedState.queries[0].state.data
+            .open_hackathons
+        );
+      });
+  }, []);
 
   return (
     <>
       <div className="mt-7">
         <h1 class="mb-4 text-center text-3xl font-extrabold text-gray-400 md:text-5xl lg:text-6xl">
           <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
-            Event Organi
-          </span>
-          {""}
-          zing Experiences 🕶
+            Hackathons
+          </span>{" "}
+          Happening 🎃
         </h1>
         <form>
           <div class="flex mt-14 justify-center">
@@ -117,44 +135,54 @@ export default function Experiences() {
           </div>
         </form>
       </div>
-      <div class="mt-9 m-4 grid mb-8 shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 lg:grid-cols-3">
-        {Experience.experience.map((e, key) => {
-          var link = "/experiences/exp?id=" + key;
+      <div class="mt-9 m-4 grid mb-8 shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-3 lg:grid-cols-4">
+        {hackathons.map((e, key) => {
+          var link = "https://devfolio.co/" + e.slug;
           return (
-            <a
-              href={link}
-              class="flex m-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded md:rounded dark:bg-gray-800 dark:border-gray-700"
-            >
-              <blockquote class="max-w-1xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                  {e.title}
-                </h3>
-                <p class="my-4">
-                  <TextTruncate
-                    line={2}
-                    element="span"
-                    truncateText="…"
-                    text={e.description}
-                    textTruncateChild={
-                      <a className="text-blue-600">Read More</a>
-                    }
-                  />
-                </p>
-              </blockquote>
-              <figcaption class="flex items-center justify-center space-x-3">
+            <div class="max-w-sm m-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
                 <img
-                  class="rounded-full w-9 h-9"
-                  src={e.img}
-                  alt="profileicture"
+                  class="rounded-t-lg"
+                  src="/docs/images/blog/image-1.jpg"
+                  alt=""
                 />
-                <div class="space-y-0.5 font-medium dark:text-white text-left">
-                  <div>{e.name}</div>
-                  <div class="text-sm text-gray-500 dark:text-gray-400">
-                    {e.designation}
-                  </div>
-                </div>
-              </figcaption>
-            </a>
+              </a>
+              <div class="p-5">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {e.name}
+                  </h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  Total Participants: {e.participants_count}
+                </p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  Starts At: {e.starts_at}
+                </p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  Ends At: {e.ends_at}
+                </p>
+                <a
+                  href={link}
+                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Read more
+                  <svg
+                    aria-hidden="true"
+                    class="w-4 h-4 ml-2 -mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
           );
         })}
 
