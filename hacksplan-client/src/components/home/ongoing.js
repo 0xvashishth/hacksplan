@@ -26,17 +26,17 @@ export default function OnGoing(){
 
     return(
         <>
-        <h2 class="pt-4 bg-gray-800 text-center text-2xl font-extrabold text-gray-400 md:text-3xl lg:text-3xl">
+        <h2 class="pt-4 dark:bg-gray-800 text-center text-2xl font-extrabold text-gray-400 md:text-3xl lg:text-3xl">
               <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
                 OnGoing
               </span>{" "}
               Hackathons
             </h2>
-            <div className="mt-6 justify-center bg-gray-800 grid md:grid-cols-4 xl:grid-cols-5 sm:grid-cols-1">
+            <div className="mt-6 justify-center dark:bg-gray-800 grid md:grid-cols-4 xl:grid-cols-5 sm:grid-cols-1">
             {hackathons.map((e, key) => {
           var link =  "https://" + e.slug + ".devfolio.co/";
           return (
-            <div class="max-w-sm m-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="max-w-sm m-3 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
                 <img
                   class="rounded-t-lg"

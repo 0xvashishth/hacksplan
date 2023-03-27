@@ -10,10 +10,10 @@ export default function CommunityCard(props) {
         <p class="mb-5 text-sm text-gray-500 sm:text-lg dark:text-gray-500">
           {obj.description}
         </p>
-        <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+        <div class="items-center justify-center space-y-1 sm:flex sm:space-y-0 sm:space-x-2">
           <a
-            href={obj.contact}
-            class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
+            href={obj.website}
+            class="w-full sm:w-auto border hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:text-white rounded-lg inline-flex items-center justify-center px-4 py-2 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ export default function CommunityCard(props) {
             {"  "}
             <a class="text-left">
               <div class="-mt-1 font-sans text-sm font-semibold">
-                Contact {obj.name}
+               connect with us
               </div>
             </a>
           </a>

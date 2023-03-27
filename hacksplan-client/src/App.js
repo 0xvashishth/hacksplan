@@ -8,10 +8,10 @@ import router from './router.js'
 
 function App() {
   return (
-    <>
+    <div class="dark:bg-gray-800">
       <NavBar/>
       <RouterProvider router={router} />
-    </>
+    </div>
   );
 }
 
