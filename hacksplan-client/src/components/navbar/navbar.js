@@ -4,7 +4,7 @@ function NavBar() {
       <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
           <a href="/" class="flex items-center">
-            <img src="/logo.png" class="h-6 mr-3 sm:h-9" alt="HacksPlan Logo" />
+            <img src="/logo-only-clean.png" class="h-6 mr-3 sm:h-9" alt="HacksPlan Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
               HacksPlan
             </span>
@@ -201,7 +201,7 @@ function NavBar() {
               data-dropdown-placement="bottom"
             >
               <span class="sr-only">Open user menu</span>
-              <img class="w-8 h-8 rounded-full" src="/logo.png" alt="user" />
+              <img class="w-8 h-8 rounded-full" src="/logo-only-clean.png" alt="user" />
             </button>
             <div
               class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"

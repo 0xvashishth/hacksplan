@@ -2,7 +2,7 @@ function eventCard() {
   return (
     <div class="max-w-sm rounded-2xl m-2 bg-gray-800 border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
       <a href="https://duhacks.tech">
-        <img class="rounded-2xl" src="/logo.png" alt="" />
+        <img class="rounded-2xl" src="/logo-only-clean.png" alt="" />
       </a>
       <div class="p-5">
         <a href="#link">
