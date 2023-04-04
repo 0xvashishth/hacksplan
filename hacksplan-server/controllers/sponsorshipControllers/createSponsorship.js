@@ -1,5 +1,5 @@
 const appwrite = require("../../appwrite/appwrite-config");
-const { ID, Query } = require("node-appwrite");
+const { ID } = require("node-appwrite");
 const database_sponsorships = process.env.database_sponsorships;
 const collection_company_sponsor = process.env.collection_company_sponsor;
 
@@ -22,8 +22,7 @@ const createSponsorship = async (req, res, next) => {
     !authorized_person_id ||
     !description ||
     !amount ||
-    !currency ||
-    !additional_note
+    !currency
   ) {
     return res.status(422).json({ error: "All fields are required!" });
   }

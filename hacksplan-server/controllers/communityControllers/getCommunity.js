@@ -1,16 +1,16 @@
 const appwrite = require("../../appwrite/appwrite-config");
 const { Query } = require("node-appwrite");
-const database_sponsorships = process.env.database_sponsorships;
-const collection_company_sponsor = process.env.collection_company_sponsor;
+const database_community = process.env.database_communities;
+const collection_community = process.env.collection_community;
 
-const getSponsorship = async (req, res, next) => {
+const getCommunity = async (req, res, next) => {
   const { id } = req.params;
   if (!id) {
     return res.status(422).json({ error: "Id is not defined!" });
   }
   try {
     appwrite.databases
-      .getDocument(database_sponsorships, collection_company_sponsor, id)
+      .getDocument(database_community, collection_community, id)
       .then(
         function (response) {
           delete response.$permissions;
@@ -30,16 +30,16 @@ const getSponsorship = async (req, res, next) => {
   }
 };
 
-const searchSponsorship = async (req, res, next) => {
+const searchCommunity = async (req, res, next) => {
   var { keyword } = req.body;
   if (!keyword) {
     keyword = [];
   } else {
-    keyword = [Query.search("company_name", keyword)];
+    keyword = [Query.search("community_name", keyword)];
   }
   try {
     appwrite.databases
-      .listDocuments(database_sponsorships, collection_company_sponsor, keyword)
+      .listDocuments(database_community, collection_community, keyword)
       .then(
         function (response) {
           for (let index = 0; index < response.total; index++) {
@@ -61,6 +61,6 @@ const searchSponsorship = async (req, res, next) => {
 };
 
 module.exports = {
-  getSponsorship,
-  searchSponsorship,
+  getCommunity,
+  searchCommunity,
 };

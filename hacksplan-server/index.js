@@ -19,6 +19,7 @@ app.use(express.json());
 app.use("/api/auth",require("./routes/auth/auth"));
 app.use("/api/users",require("./routes/user/user"));
 app.use("/api/sponsorships", require("./routes/sponsorships/sponsorships"));
+app.use("/api/communities", require("./routes/communities/communities"));
 
 // Middleware
 const middleware = (req, res, next) => {

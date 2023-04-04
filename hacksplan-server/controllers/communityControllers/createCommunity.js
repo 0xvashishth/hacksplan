@@ -1,39 +1,40 @@
 const appwrite = require("../../appwrite/appwrite-config");
-const database_sponsorships = process.env.database_sponsorships;
-const collection_company_sponsor = process.env.collection_company_sponsor;
+const { ID } = require("node-appwrite");
+const database_community = process.env.database_communities;
+const collection_community = process.env.collection_community;
 
-const updateSponsorship = async (req, res, next) => {
+const createCommunity = async (req, res, next) => {
   const {
-    id,
-    company_name,
+    community_name,
     contact_email,
     contact_link,
+    authorized_person_id,
     description,
-    amount,
-    currency,
-    additional_note
+    additional_info,
+    community_strength,
   } = req.body;
+
   if (
-    !company_name ||
+    !community_name ||
     !contact_email ||
     !contact_link ||
-    !description ||
-    !amount ||
-    !currency
+    !authorized_person_id ||
+    !description
   ) {
     return res.status(422).json({ error: "All fields are required!" });
   }
 
   try {
     appwrite.databases
-      .updateDocument(database_sponsorships, collection_company_sponsor, id, {
-        company_name,
+      .createDocument(database_community, collection_community, ID.unique(), {
+        community_name,
         contact_email,
         contact_link,
+        authorized_person_id,
         description,
-        amount,
-        currency,
-        additional_note,
+        additional_info,
+        community_strength,
+        verification: false,
       })
       .then(
         function (response) {
@@ -54,5 +55,5 @@ const updateSponsorship = async (req, res, next) => {
 };
 
 module.exports = {
-  updateSponsorship,
+  createCommunity,
 };

@@ -1,0 +1,17 @@
+curl -d '{"company_name": "vasu company", "contact_email": "test@gmail.com", "contact_link": "http://example.com/", "authorized_person_id": "64285043ede128afd0ca", "verification": false, "description": "This is a test", "amount": "100", "currency": "INR", "additional_note": "This is additional note"}' -H "Content-Type: application/json" -X POST http://localhost:8082/api/sponsorships
+
+curl -H "Content-Type: application/json" -X GET http://localhost:8082/api/sponsorships/642c22b38cd09fc4e50a
+
+curl -d '{"id": "642bf5c27e7754570c45", "company_name": "test test company", "contact_email": "test@gmail.com", "contact_link": "http://example.com/", "description": "This is a test", "amount": "100", "currency": "INR", "additional_note": "This is additional note"}' -H "Content-Type: application/json" -X PUT http://localhost:8082/api/sponsorships
+
+curl -H "Content-Type: application/json" -X DELETE http://localhost:8082/api/sponsorships/642c22b38cd09fc4e50a
+
+curl -d '{"keyword": ""}' -H "Content-Type: application/json" -X POST http://localhost:8082/api/sponsorships/search
+
+curl -d '{"community_name": "vasu community", "contact_email": "test@gmail.com", "contact_link": "http://example.com/", "authorized_person_id": "64285043ede128afd0ca", "verification": false, "description": "This is a test", "amount": "100", "currency": "INR", "additional_note": "This is additional note"}' -H "Content-Type: application/json" -X POST http://localhost:8082/api/communities
+
+curl -d '{"id": "642c5a80e055a8a08501", "community_name": "vasudev ji community", "contact_email": "test@gmail.com", "contact_link": "http://example.com/", "authorized_person_id": "64285043ede128afd0ca", "verification": false, "description": "This is a description test", "additional_note": "This is add"}' -H "Content-Type: application/json" -X PUT http://localhost:8082/api/communities
+
+
+// for disabling the https errors
+export NODE_TLS_REJECT_UNAUTHORIZED='0'
