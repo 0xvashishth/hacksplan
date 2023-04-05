@@ -1,6 +1,6 @@
 const appwrite = require("../../appwrite/appwrite-config");
-const database_community = process.env.database_communities;
-const collection_community = process.env.collection_community;
+const database_experiences = process.env.database_experiences;
+const collection_experience = process.env.collection_experience;
 
 const deleteExperience = async (req, res, next) => {
   const { id } = req.params;
@@ -9,10 +9,10 @@ const deleteExperience = async (req, res, next) => {
   }
   try {
     appwrite.databases
-      .deleteDocument(database_community, collection_community, id)
+      .deleteDocument(database_experiences, collection_experience, id)
       .then(
         function (response) {
-          return res.status(200).send({ "message": "Community successfully deleted!" });
+          return res.status(200).send({ "message": "Experience successfully deleted!" });
         },
         function (error) {
           console.log(error.response.message);

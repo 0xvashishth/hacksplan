@@ -1,30 +1,22 @@
 const appwrite = require("../../appwrite/appwrite-config");
-const database_community = process.env.database_communities;
-const collection_community = process.env.collection_community;
+const database_experiences = process.env.database_experiences;
+const collection_experience = process.env.collection_experience;
 
 const updateExperience = async (req, res, next) => {
-  const {
-    id,
-    community_name,
-    contact_email,
-    contact_link,
-    description,
-    additional_info,
-    community_strength,
-  } = req.body;
-  if (!community_name || !contact_email || !contact_link || !description) {
+  const { id, title, imgId, summary, description, Link1, Link2 } = req.body;
+  if (!title || !description || !id) {
     return res.status(422).json({ error: "All fields are required!" });
   }
 
   try {
     appwrite.databases
-      .updateDocument(database_community, collection_community, id, {
-        community_name,
-        contact_email,
-        contact_link,
+      .updateDocument(database_experiences, collection_experience, id, {
+        title,
+        imgId,
+        summary,
         description,
-        community_strength,
-        additional_info,
+        Link1,
+        Link2,
       })
       .then(
         function (response) {

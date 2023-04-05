@@ -1,7 +1,7 @@
 const appwrite = require("../../appwrite/appwrite-config");
 const { Query } = require("node-appwrite");
-const database_community = process.env.database_communities;
-const collection_community = process.env.collection_community;
+const database_experiences = process.env.database_experiences;
+const collection_experience = process.env.collection_experience;
 
 const getExperience = async (req, res, next) => {
   const { id } = req.params;
@@ -10,7 +10,7 @@ const getExperience = async (req, res, next) => {
   }
   try {
     appwrite.databases
-      .getDocument(database_community, collection_community, id)
+      .getDocument(database_experiences, collection_experience, id)
       .then(
         function (response) {
           delete response.$permissions;
@@ -35,11 +35,11 @@ const searchExperience = async (req, res, next) => {
   if (!keyword) {
     keyword = [];
   } else {
-    keyword = [Query.search("community_name", keyword)];
+    keyword = [Query.search("title", keyword)];
   }
   try {
     appwrite.databases
-      .listDocuments(database_community, collection_community, keyword)
+      .listDocuments(database_experiences, collection_experience, keyword)
       .then(
         function (response) {
           for (let index = 0; index < response.total; index++) {

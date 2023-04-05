@@ -1,40 +1,37 @@
 const appwrite = require("../../appwrite/appwrite-config");
 const { ID } = require("node-appwrite");
-const database_community = process.env.database_communities;
-const collection_community = process.env.collection_community;
+const database_experiences = process.env.database_experiences;
+const collection_experience = process.env.collection_experience;
 
 const createExperience = async (req, res, next) => {
   const {
-    community_name,
-    contact_email,
-    contact_link,
+    title,
+    imgId,
+    summary,
     authorized_person_id,
     description,
-    additional_info,
-    community_strength,
+    Link1,
+    Link2,
   } = req.body;
 
   if (
-    !community_name ||
-    !contact_email ||
-    !contact_link ||
+    !title ||
     !authorized_person_id ||
     !description
   ) {
-    return res.status(422).json({ error: "All fields are required!" });
+    return res.status(422).json({ error: "Title & Description Fields are required!" });
   }
 
   try {
     appwrite.databases
-      .createDocument(database_community, collection_community, ID.unique(), {
-        community_name,
-        contact_email,
-        contact_link,
-        authorized_person_id,
+      .createDocument(database_experiences, collection_experience, ID.unique(), {
+        title,
         description,
-        additional_info,
-        community_strength,
-        verification: false,
+        authorized_person_id,
+        Link1,
+        Link2,
+        imgId,
+        summary,
       })
       .then(
         function (response) {
@@ -45,8 +42,8 @@ const createExperience = async (req, res, next) => {
           return res.status(200).send({ response });
         },
         function (error) {
-          console.log(error.response.message);
-          return res.status(500).json({ error: error.response.message });
+          console.log(error);
+          return res.status(500).json({ error: error });
         }
       );
   } catch (err) {

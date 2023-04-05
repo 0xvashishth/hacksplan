@@ -20,6 +20,7 @@ app.use("/api/auth",require("./routes/auth/auth"));
 app.use("/api/users",require("./routes/user/user"));
 app.use("/api/sponsorships", require("./routes/sponsorships/sponsorships"));
 app.use("/api/communities", require("./routes/communities/communities"));
+app.use("/api/experiences", require("./routes/experiences/sponsorships"));
 
 // Middleware
 const middleware = (req, res, next) => {

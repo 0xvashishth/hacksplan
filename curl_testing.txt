@@ -1,4 +1,4 @@
-curl -d '{"company_name": "vasu company", "contact_email": "test@gmail.com", "contact_link": "http://example.com/", "authorized_person_id": "64285043ede128afd0ca", "verification": false, "description": "This is a test", "amount": "100", "currency": "INR", "additional_note": "This is additional note"}' -H "Content-Type: application/json" -X POST http://localhost:8082/api/sponsorships
+curl -d '{"company_name": "jay maharaj company", "contact_email": "test@gmail.com", "contact_link": "http://example.com/", "authorized_person_id": "64285043ede128afd0ca", "verification": false, "description": "This is a test", "amount": "100", "currency": "INR", "additional_note": "This is additional note"}' -H "Content-Type: application/json" -X POST http://localhost:8082/api/sponsorships
 
 curl -H "Content-Type: application/json" -X GET http://localhost:8082/api/sponsorships/642c22b38cd09fc4e50a
 
