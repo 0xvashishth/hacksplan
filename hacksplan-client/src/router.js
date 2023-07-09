@@ -8,6 +8,7 @@ import Communities from "./components/communities/communities";
 import Experiences from "./components/experiences/experiences";
 import ExperiencePage from "./components/experiences/experiencePage";
 import Hackathons from "./components/hackathons/hackathons";
+import Login from "./components/auth/login";
   
   const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ import Hackathons from "./components/hackathons/hackathons";
     {
       path: "/hackathons",
       element: <Hackathons/>
+    },
+    {
+      path: "/auth/login",
+      element: <Login/>
     }
   ]);
   

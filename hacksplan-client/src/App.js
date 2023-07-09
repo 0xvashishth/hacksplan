@@ -8,7 +8,7 @@ import router from './router.js'
 
 function App() {
   return (
-    <div className="dark:bg-gray-800">
+    <div class="dark:bg-gray-800">
       <NavBar/>
       <RouterProvider router={router} />
     </div>
