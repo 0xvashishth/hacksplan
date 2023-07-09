@@ -2,17 +2,17 @@ export default function sponsorCard(props) {
   var obj = props.obj;
   console.log(props, obj)
   return (
-    <div class="m-4 mt-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-      <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
+    <div className="m-4 mt-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
         {obj.name}
       </h5>
-      <p class="mb-5 text-sm text-gray-500 sm:text-lg dark:text-gray-500">
+      <p className="mb-5 text-sm text-gray-500 sm:text-lg dark:text-gray-500">
       {obj.description}
       </p>
-      <div class="items-center justify-center space-y-1 sm:flex sm:space-y-0 sm:space-x-2">
+      <div className="items-center justify-center space-y-1 sm:flex sm:space-y-0 sm:space-x-2">
         <a
           href={obj.website}
-          class="w-full sm:w-auto border hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:text-white rounded-lg inline-flex items-center justify-center px-4 py-2 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
+          className="w-full sm:w-auto border hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:text-white rounded-lg inline-flex items-center justify-center px-4 py-2 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -30,8 +30,8 @@ export default function sponsorCard(props) {
               y2="42.33"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0" stop-color="#2aa4f4"></stop>
-              <stop offset="1" stop-color="#007ad9"></stop>
+              <stop offset="0" stopColor="#2aa4f4"></stop>
+              <stop offset="1" stopColor="#007ad9"></stop>
             </linearGradient>
             <path
               fill="url(#UoM~0_1BpfEneny~ePS0ba_57GgOxl1VjRW_gr1)"
@@ -87,8 +87,8 @@ export default function sponsorCard(props) {
             ></path>
           </svg>
           {"  "}
-          <div class="text-left">
-            <div class="-mt-1 font-sans text-sm font-semibold">
+          <div className="text-left">
+            <div className="-mt-1 font-sans text-sm font-semibold">
                {obj.name}
             </div>
           </div>
